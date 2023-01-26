@@ -1,0 +1,1 @@
+An integer vector type based on `uint3` that is used to specify dimensions. When defining a variable of this type, any component left unspecified is **initialized to 1**.
