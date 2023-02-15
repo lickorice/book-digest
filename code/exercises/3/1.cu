@@ -1,5 +1,6 @@
 // Matrix addition program for square matrices
 // Note that matrices are represented in a single-dimension vector
+// Analysis: there may be more cache misses (?) with (d). (b) should perform the fastest, but will consume a lot of threads.
 #include <iostream>
 
 // For item b:
@@ -22,6 +23,17 @@ __global__ void matAdd_c(float* A, float* B, float* C, int N) {
     }
 }
 
+// For item d:
+__global__ void matAdd_d(float* A, float* B, float* C, int N) {
+    // Block processes row, thread processes element:
+    if (threadIdx.x < N) {
+        for (int i = 0; i < N; ++i) {
+            int idx = (i * N) + threadIdx.x;
+            A[idx] = B[idx] + C[idx];
+        }
+    }
+}
+
 void matAdd(float* A, float* B, float* C, int N) {
     float *d_A, *d_B, *d_C;
     int size = N*N*sizeof(float);
@@ -36,7 +48,8 @@ void matAdd(float* A, float* B, float* C, int N) {
     cudaMemcpy(d_C, C, size, cudaMemcpyHostToDevice);
 
     // matAdd_b<<<N, N>>>(d_A, d_B, d_C, N); // Each thread processes an element
-    matAdd_c<<<1, N>>>(d_A, d_B, d_C, N); // Each thread processes a row
+    // matAdd_c<<<1, N>>>(d_A, d_B, d_C, N); // Each thread processes a row
+    matAdd_d<<<1, N>>>(d_A, d_B, d_C, N); // Each thread processes a column
 
     // Copy
     cudaMemcpy(A, d_A, size, cudaMemcpyDeviceToHost);
