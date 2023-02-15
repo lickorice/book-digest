@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "9daa3781dfc08cba",
+    "type": "split",
+    "children": [
+      {
+        "id": "db0611b172ac745a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc84afa6dbcdea1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Linear Algebra Review.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d963ab6327c6898",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Introduction to Data Parallelism and CUDA C.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9db22023e3f23917",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Introduction to Data Parallelism and CUDA C.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7055073c94d9a57",
+    "type": "split",
+    "children": [
+      {
+        "id": "2138d4009e0892ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cea2855134f176a7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0f9725ec8f6efe69",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eca3e357c2ce04ac",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ce3fb4e262ae7fb0",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b668b2f2379aa5a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e329d8711c9fb72",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3. Introduction to Data Parallelism and CUDA C.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9175c2960257c339",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "3. Introduction to Data Parallelism and CUDA C.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2ab40d5bb9cb6230",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "68d2fbcf9e9f49a4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "3. Introduction to Data Parallelism and CUDA C.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "68d2fbcf9e9f49a4",
+  "lastOpenFiles": [
+    "6. Performance Considerations.md",
+    "3. Introduction to Data Parallelism and CUDA C.md",
+    "2. Linear Algebra Review.md"
+  ]
+}
