@@ -35,8 +35,8 @@ void matAdd(float* A, float* B, float* C, int N) {
     cudaMemcpy(d_B, B, size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_C, C, size, cudaMemcpyHostToDevice);
 
-    // matAdd_b<<<N, N>>>(d_A, d_B, d_C, N);
-    matAdd_c<<<1, N>>>(d_A, d_B, d_C, N);
+    // matAdd_b<<<N, N>>>(d_A, d_B, d_C, N); // Each thread processes an element
+    matAdd_c<<<1, N>>>(d_A, d_B, d_C, N); // Each thread processes a row
 
     // Copy
     cudaMemcpy(A, d_A, size, cudaMemcpyDeviceToHost);
