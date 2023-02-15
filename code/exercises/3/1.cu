@@ -11,6 +11,17 @@ __global__ void matAdd_b(float* A, float* B, float* C, int N) {
     }
 }
 
+// For item c:
+__global__ void matAdd_c(float* A, float* B, float* C, int N) {
+    // Block processes row, thread processes element:
+    if (threadIdx.x < N) {
+        for (int i = 0; i < N; ++i) {
+            int idx = (threadIdx.x * N) + i;
+            A[idx] = B[idx] + C[idx];
+        }
+    }
+}
+
 void matAdd(float* A, float* B, float* C, int N) {
     float *d_A, *d_B, *d_C;
     int size = N*N*sizeof(float);
@@ -24,7 +35,8 @@ void matAdd(float* A, float* B, float* C, int N) {
     cudaMemcpy(d_B, B, size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_C, C, size, cudaMemcpyHostToDevice);
 
-    matAdd_b<<<N, N>>>(d_A, d_B, d_C, N);
+    // matAdd_b<<<N, N>>>(d_A, d_B, d_C, N);
+    matAdd_c<<<1, N>>>(d_A, d_B, d_C, N);
 
     // Copy
     cudaMemcpy(A, d_A, size, cudaMemcpyDeviceToHost);
